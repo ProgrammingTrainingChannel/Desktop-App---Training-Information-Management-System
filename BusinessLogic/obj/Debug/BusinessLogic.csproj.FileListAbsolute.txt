@@ -1,0 +1,22 @@
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\bin\Debug\BusinessLogic.dll
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\bin\Debug\BusinessLogic.pdb
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\bin\Debug\BusinessEntity.dll
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\bin\Debug\DataAccessLogic.dll
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\bin\Debug\EntityFramework.dll
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\bin\Debug\BusinessEntity.pdb
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\bin\Debug\DataAccessLogic.pdb
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\bin\Debug\EntityFramework.xml
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\obj\Debug\BusinessLogic.dll
+E:\BT IT Solutions\Training Information Management System\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\bin\Debug\BusinessEntity.dll
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\bin\Debug\DataAccessLogic.dll
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\bin\Debug\EntityFramework.dll
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\bin\Debug\BusinessEntity.pdb
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\bin\Debug\DataAccessLogic.pdb
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\bin\Debug\EntityFramework.xml
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\Projects\Programming Camp\Training Information Management System\BusinessLogic\obj\Debug\BusinessLogic.pdb

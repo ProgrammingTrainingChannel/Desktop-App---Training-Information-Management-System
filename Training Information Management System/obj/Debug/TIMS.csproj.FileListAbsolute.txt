@@ -1,0 +1,104 @@
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\TIMS.exe.config
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\TIMS.exe
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\TIMS.pdb
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\BusinessEntity.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\BusinessLogic.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\EntityFramework.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\EntityFramework.SqlServer.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\DataAccessLogic.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\BusinessEntity.pdb
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\BusinessLogic.pdb
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\EntityFramework.xml
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\EntityFramework.SqlServer.xml
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\DataAccessLogic.pdb
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.csprojResolveAssemblyReference.cache
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmAbout.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmAcademicLevel.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmCourse.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmGender.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmHome.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmLogin.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmReportCriteria.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmReportViewer.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmTrainee.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmTraineeCourse.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmTraineeMessage.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmTraineePayment.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.Properties.Resources.resources
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.csproj.GenerateResource.Cache
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\RdlCompile.cache
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\RdlCompile.compiled
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.exe
+E:\BT IT Solutions\Training Information Management System\Training Information Management System\obj\Debug\TIMS.pdb
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineeCourseList.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineeList.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineeMessageList.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineePaymentList.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineePaymentSummaryByCourse.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineePaymentSummaryByPaymentDate.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineeSummaryByAcademicLevel.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineeSummaryByCourse.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineeSummaryByGender.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Reports\rptTraineeSummaryByRegistrationDate.rdlc
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\TIMS.exe.config
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\TIMS.exe
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\TIMS.pdb
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\BusinessEntity.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\BusinessLogic.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\EntityFramework.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\DataAccessLogic.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\BusinessEntity.pdb
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\BusinessLogic.pdb
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\EntityFramework.xml
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\DataAccessLogic.pdb
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.csprojResolveAssemblyReference.cache
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmAbout.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmAcademicLevel.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmCourse.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmGender.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmHome.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmLogin.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmPaymentSummaryReportCriteria.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmReportCriteria.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmReportViewer.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmSearchTrainee.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmSplash.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmSummaryReportCriteria.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmTrainee.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmTraineeCourse.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmTraineeMessage.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmTraineePayment.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.frmUserManager.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.Properties.Resources.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.Resource-en.resources
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.csproj.GenerateResource.Cache
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\RdlCompile.cache
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\RdlCompile.compiled
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.exe
+D:\Projects\Programming Camp\Training Information Management System\Training Information Management System\obj\Debug\TIMS.pdb

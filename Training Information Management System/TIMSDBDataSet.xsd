@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TIMSDBDataSet" targetNamespace="http://tempuri.org/TIMSDBDataSet.xsd" xmlns:mstns="http://tempuri.org/TIMSDBDataSet.xsd" xmlns="http://tempuri.org/TIMSDBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TIMSDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TIMSDBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TIMS.Properties.Settings.GlobalReference.Default.TIMSDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeCourseCostTableAdapter" GeneratorDataComponentClassName="View_TraineeCourseCostTableAdapter" Name="View_TraineeCourseCost" UserDataComponentName="View_TraineeCourseCostTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeCourseCost" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, TraineeCourseDetail FROM dbo.View_TraineeCourseCost</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="TraineeCourseDetail" DataSetColumn="TraineeCourseDetail" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeCourseListTableAdapter" GeneratorDataComponentClassName="View_TraineeCourseListTableAdapter" Name="View_TraineeCourseList" UserDataComponentName="View_TraineeCourseListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeCourseList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Fullname, Course, RegistrationDate, Duration, Cost, CreatedBy, CreatedDate, UpdatedBy, UpdatedDate FROM dbo.View_TraineeCourseList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Fullname" DataSetColumn="Fullname" />
+              <Mapping SourceColumn="Course" DataSetColumn="Course" />
+              <Mapping SourceColumn="RegistrationDate" DataSetColumn="RegistrationDate" />
+              <Mapping SourceColumn="Duration" DataSetColumn="Duration" />
+              <Mapping SourceColumn="Cost" DataSetColumn="Cost" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="CreatedDate" DataSetColumn="CreatedDate" />
+              <Mapping SourceColumn="UpdatedBy" DataSetColumn="UpdatedBy" />
+              <Mapping SourceColumn="UpdatedDate" DataSetColumn="UpdatedDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeListTableAdapter" GeneratorDataComponentClassName="View_TraineeListTableAdapter" Name="View_TraineeList" UserDataComponentName="View_TraineeListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Fullname, BirthDate, Gender, AcademicLevel, Address, PhoneNumber, Photo, CreatedBy, CreatedDate, UpdatedBy, UpdatedDate FROM dbo.View_TraineeList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Fullname" DataSetColumn="Fullname" />
+              <Mapping SourceColumn="BirthDate" DataSetColumn="BirthDate" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="AcademicLevel" DataSetColumn="AcademicLevel" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
+              <Mapping SourceColumn="Photo" DataSetColumn="Photo" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="CreatedDate" DataSetColumn="CreatedDate" />
+              <Mapping SourceColumn="UpdatedBy" DataSetColumn="UpdatedBy" />
+              <Mapping SourceColumn="UpdatedDate" DataSetColumn="UpdatedDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeListForSummaryTableAdapter" GeneratorDataComponentClassName="View_TraineeListForSummaryTableAdapter" Name="View_TraineeListForSummary" UserDataComponentName="View_TraineeListForSummaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeListForSummary" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Fullname, BirthDate, Gender, AcademicLevel, PhoneNumber, RegistrationDate, Duration, Cost FROM dbo.View_TraineeListForSummary</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Fullname" DataSetColumn="Fullname" />
+              <Mapping SourceColumn="BirthDate" DataSetColumn="BirthDate" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="AcademicLevel" DataSetColumn="AcademicLevel" />
+              <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
+              <Mapping SourceColumn="RegistrationDate" DataSetColumn="RegistrationDate" />
+              <Mapping SourceColumn="Duration" DataSetColumn="Duration" />
+              <Mapping SourceColumn="Cost" DataSetColumn="Cost" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeMessageListTableAdapter" GeneratorDataComponentClassName="View_TraineeMessageListTableAdapter" Name="View_TraineeMessageList" UserDataComponentName="View_TraineeMessageListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeMessageList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Fullname, PhoneNumber, Message, Status, CreatedBy, CreatedDate, UpdatedBy, UpdatedDate FROM dbo.View_TraineeMessageList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Fullname" DataSetColumn="Fullname" />
+              <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
+              <Mapping SourceColumn="Message" DataSetColumn="Message" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="CreatedDate" DataSetColumn="CreatedDate" />
+              <Mapping SourceColumn="UpdatedBy" DataSetColumn="UpdatedBy" />
+              <Mapping SourceColumn="UpdatedDate" DataSetColumn="UpdatedDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineePaymentListTableAdapter" GeneratorDataComponentClassName="View_TraineePaymentListTableAdapter" Name="View_TraineePaymentList" UserDataComponentName="View_TraineePaymentListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineePaymentList" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Fullname, Course, RegistrationDate, Duration, Cost, PaymentDate, PaymentAmount FROM dbo.View_TraineePaymentList</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Fullname" DataSetColumn="Fullname" />
+              <Mapping SourceColumn="Course" DataSetColumn="Course" />
+              <Mapping SourceColumn="RegistrationDate" DataSetColumn="RegistrationDate" />
+              <Mapping SourceColumn="Duration" DataSetColumn="Duration" />
+              <Mapping SourceColumn="Cost" DataSetColumn="Cost" />
+              <Mapping SourceColumn="PaymentDate" DataSetColumn="PaymentDate" />
+              <Mapping SourceColumn="PaymentAmount" DataSetColumn="PaymentAmount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeSummaryByAcademicLevelTableAdapter" GeneratorDataComponentClassName="View_TraineeSummaryByAcademicLevelTableAdapter" Name="View_TraineeSummaryByAcademicLevel" UserDataComponentName="View_TraineeSummaryByAcademicLevelTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeSummaryByAcademicLevel" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RegistrationDate, Gender, AcademicLevel, Counter FROM dbo.View_TraineeSummaryByAcademicLevel</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RegistrationDate" DataSetColumn="RegistrationDate" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="AcademicLevel" DataSetColumn="AcademicLevel" />
+              <Mapping SourceColumn="Counter" DataSetColumn="Counter" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeSummaryByGenderTableAdapter" GeneratorDataComponentClassName="View_TraineeSummaryByGenderTableAdapter" Name="View_TraineeSummaryByGender" UserDataComponentName="View_TraineeSummaryByGenderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeSummaryByGender" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RegistrationDate, Gender, AcademicLevel, Counter FROM dbo.View_TraineeSummaryByGender</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RegistrationDate" DataSetColumn="RegistrationDate" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="AcademicLevel" DataSetColumn="AcademicLevel" />
+              <Mapping SourceColumn="Counter" DataSetColumn="Counter" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeSummaryByRegistrationDateTableAdapter" GeneratorDataComponentClassName="View_TraineeSummaryByRegistrationDateTableAdapter" Name="View_TraineeSummaryByRegistrationDate" UserDataComponentName="View_TraineeSummaryByRegistrationDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeSummaryByRegistrationDate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RegistrationDate, Gender, AcademicLevel, Counter FROM dbo.View_TraineeSummaryByRegistrationDate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RegistrationDate" DataSetColumn="RegistrationDate" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="AcademicLevel" DataSetColumn="AcademicLevel" />
+              <Mapping SourceColumn="Counter" DataSetColumn="Counter" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineeSummaryByCourseTableAdapter" GeneratorDataComponentClassName="View_TraineeSummaryByCourseTableAdapter" Name="View_TraineeSummaryByCourse" UserDataComponentName="View_TraineeSummaryByCourseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineeSummaryByCourse" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RegistrationDate, Course, Counter FROM dbo.View_TraineeSummaryByCourse</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RegistrationDate" DataSetColumn="RegistrationDate" />
+              <Mapping SourceColumn="Course" DataSetColumn="Course" />
+              <Mapping SourceColumn="Counter" DataSetColumn="Counter" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineePaymentByCourseTableAdapter" GeneratorDataComponentClassName="View_TraineePaymentByCourseTableAdapter" Name="View_TraineePaymentByCourse" UserDataComponentName="View_TraineePaymentByCourseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineePaymentByCourse" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PaymentDate, Course, PaymentAmount FROM dbo.View_TraineePaymentByCourse</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PaymentDate" DataSetColumn="PaymentDate" />
+              <Mapping SourceColumn="Course" DataSetColumn="Course" />
+              <Mapping SourceColumn="PaymentAmount" DataSetColumn="PaymentAmount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_TraineePaymentByPaymentDateTableAdapter" GeneratorDataComponentClassName="View_TraineePaymentByPaymentDateTableAdapter" Name="View_TraineePaymentByPaymentDate" UserDataComponentName="View_TraineePaymentByPaymentDateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TIMSDBConnectionString (Settings)" DbObjectName="TIMSDB.dbo.View_TraineePaymentByPaymentDate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PaymentDate, Course, PaymentAmount FROM dbo.View_TraineePaymentByPaymentDate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PaymentDate" DataSetColumn="PaymentDate" />
+              <Mapping SourceColumn="Course" DataSetColumn="Course" />
+              <Mapping SourceColumn="PaymentAmount" DataSetColumn="PaymentAmount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TIMSDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TIMSDBDataSet" msprop:Generator_UserDSName="TIMSDBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_TraineeCourseCost" msprop:Generator_TableClassName="View_TraineeCourseCostDataTable" msprop:Generator_TableVarName="tableView_TraineeCourseCost" msprop:Generator_TablePropName="View_TraineeCourseCost" msprop:Generator_RowDeletingName="View_TraineeCourseCostRowDeleting" msprop:Generator_RowChangingName="View_TraineeCourseCostRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeCourseCostRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeCourseCostRowDeleted" msprop:Generator_UserTableName="View_TraineeCourseCost" msprop:Generator_RowChangedName="View_TraineeCourseCostRowChanged" msprop:Generator_RowEvArgName="View_TraineeCourseCostRowChangeEvent" msprop:Generator_RowClassName="View_TraineeCourseCostRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="TraineeCourseDetail" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTraineeCourseDetail" msprop:Generator_ColumnPropNameInRow="TraineeCourseDetail" msprop:Generator_ColumnPropNameInTable="TraineeCourseDetailColumn" msprop:Generator_UserColumnName="TraineeCourseDetail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="277" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineeCourseList" msprop:Generator_TableClassName="View_TraineeCourseListDataTable" msprop:Generator_TableVarName="tableView_TraineeCourseList" msprop:Generator_TablePropName="View_TraineeCourseList" msprop:Generator_RowDeletingName="View_TraineeCourseListRowDeleting" msprop:Generator_RowChangingName="View_TraineeCourseListRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeCourseListRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeCourseListRowDeleted" msprop:Generator_UserTableName="View_TraineeCourseList" msprop:Generator_RowChangedName="View_TraineeCourseListRowChanged" msprop:Generator_RowEvArgName="View_TraineeCourseListRowChangeEvent" msprop:Generator_RowClassName="View_TraineeCourseListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Course" msprop:Generator_ColumnVarNameInTable="columnCourse" msprop:Generator_ColumnPropNameInRow="Course" msprop:Generator_ColumnPropNameInTable="CourseColumn" msprop:Generator_UserColumnName="Course">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegistrationDate" msprop:Generator_ColumnVarNameInTable="columnRegistrationDate" msprop:Generator_ColumnPropNameInRow="RegistrationDate" msprop:Generator_ColumnPropNameInTable="RegistrationDateColumn" msprop:Generator_UserColumnName="RegistrationDate" type="xs:dateTime" />
+              <xs:element name="Duration" msprop:Generator_ColumnVarNameInTable="columnDuration" msprop:Generator_ColumnPropNameInRow="Duration" msprop:Generator_ColumnPropNameInTable="DurationColumn" msprop:Generator_UserColumnName="Duration">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:decimal" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" />
+              <xs:element name="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" msprop:Generator_UserColumnName="UpdatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" msprop:Generator_UserColumnName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineeList" msprop:Generator_TableClassName="View_TraineeListDataTable" msprop:Generator_TableVarName="tableView_TraineeList" msprop:Generator_TablePropName="View_TraineeList" msprop:Generator_RowDeletingName="View_TraineeListRowDeleting" msprop:Generator_RowChangingName="View_TraineeListRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeListRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeListRowDeleted" msprop:Generator_UserTableName="View_TraineeList" msprop:Generator_RowChangedName="View_TraineeListRowChanged" msprop:Generator_RowEvArgName="View_TraineeListRowChangeEvent" msprop:Generator_RowClassName="View_TraineeListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BirthDate" msprop:Generator_ColumnVarNameInTable="columnBirthDate" msprop:Generator_ColumnPropNameInRow="BirthDate" msprop:Generator_ColumnPropNameInTable="BirthDateColumn" msprop:Generator_UserColumnName="BirthDate" type="xs:dateTime" />
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AcademicLevel" msprop:Generator_ColumnVarNameInTable="columnAcademicLevel" msprop:Generator_ColumnPropNameInRow="AcademicLevel" msprop:Generator_ColumnPropNameInTable="AcademicLevelColumn" msprop:Generator_UserColumnName="AcademicLevel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_UserColumnName="Address">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Photo" msprop:Generator_ColumnVarNameInTable="columnPhoto" msprop:Generator_ColumnPropNameInRow="Photo" msprop:Generator_ColumnPropNameInTable="PhotoColumn" msprop:Generator_UserColumnName="Photo" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" />
+              <xs:element name="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" msprop:Generator_UserColumnName="UpdatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" msprop:Generator_UserColumnName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineeListForSummary" msprop:Generator_TableClassName="View_TraineeListForSummaryDataTable" msprop:Generator_TableVarName="tableView_TraineeListForSummary" msprop:Generator_TablePropName="View_TraineeListForSummary" msprop:Generator_RowDeletingName="View_TraineeListForSummaryRowDeleting" msprop:Generator_RowChangingName="View_TraineeListForSummaryRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeListForSummaryRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeListForSummaryRowDeleted" msprop:Generator_UserTableName="View_TraineeListForSummary" msprop:Generator_RowChangedName="View_TraineeListForSummaryRowChanged" msprop:Generator_RowEvArgName="View_TraineeListForSummaryRowChangeEvent" msprop:Generator_RowClassName="View_TraineeListForSummaryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BirthDate" msprop:Generator_ColumnVarNameInTable="columnBirthDate" msprop:Generator_ColumnPropNameInRow="BirthDate" msprop:Generator_ColumnPropNameInTable="BirthDateColumn" msprop:Generator_UserColumnName="BirthDate" type="xs:dateTime" />
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AcademicLevel" msprop:Generator_ColumnVarNameInTable="columnAcademicLevel" msprop:Generator_ColumnPropNameInRow="AcademicLevel" msprop:Generator_ColumnPropNameInTable="AcademicLevelColumn" msprop:Generator_UserColumnName="AcademicLevel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegistrationDate" msprop:Generator_ColumnVarNameInTable="columnRegistrationDate" msprop:Generator_ColumnPropNameInRow="RegistrationDate" msprop:Generator_ColumnPropNameInTable="RegistrationDateColumn" msprop:Generator_UserColumnName="RegistrationDate" type="xs:dateTime" />
+              <xs:element name="Duration" msprop:Generator_ColumnVarNameInTable="columnDuration" msprop:Generator_ColumnPropNameInRow="Duration" msprop:Generator_ColumnPropNameInTable="DurationColumn" msprop:Generator_UserColumnName="Duration">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineeMessageList" msprop:Generator_TableClassName="View_TraineeMessageListDataTable" msprop:Generator_TableVarName="tableView_TraineeMessageList" msprop:Generator_TablePropName="View_TraineeMessageList" msprop:Generator_RowDeletingName="View_TraineeMessageListRowDeleting" msprop:Generator_RowChangingName="View_TraineeMessageListRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeMessageListRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeMessageListRowDeleted" msprop:Generator_UserTableName="View_TraineeMessageList" msprop:Generator_RowChangedName="View_TraineeMessageListRowChanged" msprop:Generator_RowEvArgName="View_TraineeMessageListRowChangeEvent" msprop:Generator_RowClassName="View_TraineeMessageListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PhoneNumber" msprop:Generator_ColumnVarNameInTable="columnPhoneNumber" msprop:Generator_ColumnPropNameInRow="PhoneNumber" msprop:Generator_ColumnPropNameInTable="PhoneNumberColumn" msprop:Generator_UserColumnName="PhoneNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Message" msprop:Generator_ColumnVarNameInTable="columnMessage" msprop:Generator_ColumnPropNameInRow="Message" msprop:Generator_ColumnPropNameInTable="MessageColumn" msprop:Generator_UserColumnName="Message">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" />
+              <xs:element name="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" msprop:Generator_UserColumnName="UpdatedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" msprop:Generator_UserColumnName="UpdatedDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineePaymentList" msprop:Generator_TableClassName="View_TraineePaymentListDataTable" msprop:Generator_TableVarName="tableView_TraineePaymentList" msprop:Generator_TablePropName="View_TraineePaymentList" msprop:Generator_RowDeletingName="View_TraineePaymentListRowDeleting" msprop:Generator_RowChangingName="View_TraineePaymentListRowChanging" msprop:Generator_RowEvHandlerName="View_TraineePaymentListRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineePaymentListRowDeleted" msprop:Generator_UserTableName="View_TraineePaymentList" msprop:Generator_RowChangedName="View_TraineePaymentListRowChanged" msprop:Generator_RowEvArgName="View_TraineePaymentListRowChangeEvent" msprop:Generator_RowClassName="View_TraineePaymentListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fullname" msprop:Generator_ColumnVarNameInTable="columnFullname" msprop:Generator_ColumnPropNameInRow="Fullname" msprop:Generator_ColumnPropNameInTable="FullnameColumn" msprop:Generator_UserColumnName="Fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Course" msprop:Generator_ColumnVarNameInTable="columnCourse" msprop:Generator_ColumnPropNameInRow="Course" msprop:Generator_ColumnPropNameInTable="CourseColumn" msprop:Generator_UserColumnName="Course">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegistrationDate" msprop:Generator_ColumnVarNameInTable="columnRegistrationDate" msprop:Generator_ColumnPropNameInRow="RegistrationDate" msprop:Generator_ColumnPropNameInTable="RegistrationDateColumn" msprop:Generator_UserColumnName="RegistrationDate" type="xs:dateTime" />
+              <xs:element name="Duration" msprop:Generator_ColumnVarNameInTable="columnDuration" msprop:Generator_ColumnPropNameInRow="Duration" msprop:Generator_ColumnPropNameInTable="DurationColumn" msprop:Generator_UserColumnName="Duration">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cost" msprop:Generator_ColumnVarNameInTable="columnCost" msprop:Generator_ColumnPropNameInRow="Cost" msprop:Generator_ColumnPropNameInTable="CostColumn" msprop:Generator_UserColumnName="Cost" type="xs:decimal" />
+              <xs:element name="PaymentDate" msprop:Generator_ColumnVarNameInTable="columnPaymentDate" msprop:Generator_ColumnPropNameInRow="PaymentDate" msprop:Generator_ColumnPropNameInTable="PaymentDateColumn" msprop:Generator_UserColumnName="PaymentDate" type="xs:dateTime" />
+              <xs:element name="PaymentAmount" msprop:Generator_ColumnVarNameInTable="columnPaymentAmount" msprop:Generator_ColumnPropNameInRow="PaymentAmount" msprop:Generator_ColumnPropNameInTable="PaymentAmountColumn" msprop:Generator_UserColumnName="PaymentAmount" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineeSummaryByAcademicLevel" msprop:Generator_TableClassName="View_TraineeSummaryByAcademicLevelDataTable" msprop:Generator_TableVarName="tableView_TraineeSummaryByAcademicLevel" msprop:Generator_TablePropName="View_TraineeSummaryByAcademicLevel" msprop:Generator_RowDeletingName="View_TraineeSummaryByAcademicLevelRowDeleting" msprop:Generator_RowChangingName="View_TraineeSummaryByAcademicLevelRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeSummaryByAcademicLevelRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeSummaryByAcademicLevelRowDeleted" msprop:Generator_UserTableName="View_TraineeSummaryByAcademicLevel" msprop:Generator_RowChangedName="View_TraineeSummaryByAcademicLevelRowChanged" msprop:Generator_RowEvArgName="View_TraineeSummaryByAcademicLevelRowChangeEvent" msprop:Generator_RowClassName="View_TraineeSummaryByAcademicLevelRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegistrationDate" msprop:Generator_ColumnVarNameInTable="columnRegistrationDate" msprop:Generator_ColumnPropNameInRow="RegistrationDate" msprop:Generator_ColumnPropNameInTable="RegistrationDateColumn" msprop:Generator_UserColumnName="RegistrationDate" type="xs:dateTime" />
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AcademicLevel" msprop:Generator_ColumnVarNameInTable="columnAcademicLevel" msprop:Generator_ColumnPropNameInRow="AcademicLevel" msprop:Generator_ColumnPropNameInTable="AcademicLevelColumn" msprop:Generator_UserColumnName="AcademicLevel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Counter" msprop:Generator_ColumnVarNameInTable="columnCounter" msprop:Generator_ColumnPropNameInRow="Counter" msprop:Generator_ColumnPropNameInTable="CounterColumn" msprop:Generator_UserColumnName="Counter" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineeSummaryByGender" msprop:Generator_TableClassName="View_TraineeSummaryByGenderDataTable" msprop:Generator_TableVarName="tableView_TraineeSummaryByGender" msprop:Generator_TablePropName="View_TraineeSummaryByGender" msprop:Generator_RowDeletingName="View_TraineeSummaryByGenderRowDeleting" msprop:Generator_RowChangingName="View_TraineeSummaryByGenderRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeSummaryByGenderRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeSummaryByGenderRowDeleted" msprop:Generator_UserTableName="View_TraineeSummaryByGender" msprop:Generator_RowChangedName="View_TraineeSummaryByGenderRowChanged" msprop:Generator_RowEvArgName="View_TraineeSummaryByGenderRowChangeEvent" msprop:Generator_RowClassName="View_TraineeSummaryByGenderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegistrationDate" msprop:Generator_ColumnVarNameInTable="columnRegistrationDate" msprop:Generator_ColumnPropNameInRow="RegistrationDate" msprop:Generator_ColumnPropNameInTable="RegistrationDateColumn" msprop:Generator_UserColumnName="RegistrationDate" type="xs:dateTime" />
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AcademicLevel" msprop:Generator_ColumnVarNameInTable="columnAcademicLevel" msprop:Generator_ColumnPropNameInRow="AcademicLevel" msprop:Generator_ColumnPropNameInTable="AcademicLevelColumn" msprop:Generator_UserColumnName="AcademicLevel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Counter" msprop:Generator_ColumnVarNameInTable="columnCounter" msprop:Generator_ColumnPropNameInRow="Counter" msprop:Generator_ColumnPropNameInTable="CounterColumn" msprop:Generator_UserColumnName="Counter" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineeSummaryByRegistrationDate" msprop:Generator_TableClassName="View_TraineeSummaryByRegistrationDateDataTable" msprop:Generator_TableVarName="tableView_TraineeSummaryByRegistrationDate" msprop:Generator_TablePropName="View_TraineeSummaryByRegistrationDate" msprop:Generator_RowDeletingName="View_TraineeSummaryByRegistrationDateRowDeleting" msprop:Generator_RowChangingName="View_TraineeSummaryByRegistrationDateRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeSummaryByRegistrationDateRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeSummaryByRegistrationDateRowDeleted" msprop:Generator_UserTableName="View_TraineeSummaryByRegistrationDate" msprop:Generator_RowChangedName="View_TraineeSummaryByRegistrationDateRowChanged" msprop:Generator_RowEvArgName="View_TraineeSummaryByRegistrationDateRowChangeEvent" msprop:Generator_RowClassName="View_TraineeSummaryByRegistrationDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegistrationDate" msprop:Generator_ColumnVarNameInTable="columnRegistrationDate" msprop:Generator_ColumnPropNameInRow="RegistrationDate" msprop:Generator_ColumnPropNameInTable="RegistrationDateColumn" msprop:Generator_UserColumnName="RegistrationDate" type="xs:dateTime" />
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AcademicLevel" msprop:Generator_ColumnVarNameInTable="columnAcademicLevel" msprop:Generator_ColumnPropNameInRow="AcademicLevel" msprop:Generator_ColumnPropNameInTable="AcademicLevelColumn" msprop:Generator_UserColumnName="AcademicLevel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Counter" msprop:Generator_ColumnVarNameInTable="columnCounter" msprop:Generator_ColumnPropNameInRow="Counter" msprop:Generator_ColumnPropNameInTable="CounterColumn" msprop:Generator_UserColumnName="Counter" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineeSummaryByCourse" msprop:Generator_TableClassName="View_TraineeSummaryByCourseDataTable" msprop:Generator_TableVarName="tableView_TraineeSummaryByCourse" msprop:Generator_RowChangedName="View_TraineeSummaryByCourseRowChanged" msprop:Generator_TablePropName="View_TraineeSummaryByCourse" msprop:Generator_RowDeletingName="View_TraineeSummaryByCourseRowDeleting" msprop:Generator_RowChangingName="View_TraineeSummaryByCourseRowChanging" msprop:Generator_RowEvHandlerName="View_TraineeSummaryByCourseRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineeSummaryByCourseRowDeleted" msprop:Generator_RowClassName="View_TraineeSummaryByCourseRow" msprop:Generator_UserTableName="View_TraineeSummaryByCourse" msprop:Generator_RowEvArgName="View_TraineeSummaryByCourseRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RegistrationDate" msprop:Generator_ColumnVarNameInTable="columnRegistrationDate" msprop:Generator_ColumnPropNameInRow="RegistrationDate" msprop:Generator_ColumnPropNameInTable="RegistrationDateColumn" msprop:Generator_UserColumnName="RegistrationDate" type="xs:dateTime" />
+              <xs:element name="Course" msprop:Generator_ColumnVarNameInTable="columnCourse" msprop:Generator_ColumnPropNameInRow="Course" msprop:Generator_ColumnPropNameInTable="CourseColumn" msprop:Generator_UserColumnName="Course">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Counter" msprop:Generator_ColumnVarNameInTable="columnCounter" msprop:Generator_ColumnPropNameInRow="Counter" msprop:Generator_ColumnPropNameInTable="CounterColumn" msprop:Generator_UserColumnName="Counter" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineePaymentByCourse" msprop:Generator_TableClassName="View_TraineePaymentByCourseDataTable" msprop:Generator_TableVarName="tableView_TraineePaymentByCourse" msprop:Generator_TablePropName="View_TraineePaymentByCourse" msprop:Generator_RowDeletingName="View_TraineePaymentByCourseRowDeleting" msprop:Generator_RowChangingName="View_TraineePaymentByCourseRowChanging" msprop:Generator_RowEvHandlerName="View_TraineePaymentByCourseRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineePaymentByCourseRowDeleted" msprop:Generator_UserTableName="View_TraineePaymentByCourse" msprop:Generator_RowChangedName="View_TraineePaymentByCourseRowChanged" msprop:Generator_RowEvArgName="View_TraineePaymentByCourseRowChangeEvent" msprop:Generator_RowClassName="View_TraineePaymentByCourseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PaymentDate" msprop:Generator_ColumnVarNameInTable="columnPaymentDate" msprop:Generator_ColumnPropNameInRow="PaymentDate" msprop:Generator_ColumnPropNameInTable="PaymentDateColumn" msprop:Generator_UserColumnName="PaymentDate" type="xs:dateTime" />
+              <xs:element name="Course" msprop:Generator_ColumnVarNameInTable="columnCourse" msprop:Generator_ColumnPropNameInRow="Course" msprop:Generator_ColumnPropNameInTable="CourseColumn" msprop:Generator_UserColumnName="Course">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentAmount" msprop:Generator_ColumnVarNameInTable="columnPaymentAmount" msprop:Generator_ColumnPropNameInRow="PaymentAmount" msprop:Generator_ColumnPropNameInTable="PaymentAmountColumn" msprop:Generator_UserColumnName="PaymentAmount" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_TraineePaymentByPaymentDate" msprop:Generator_TableClassName="View_TraineePaymentByPaymentDateDataTable" msprop:Generator_TableVarName="tableView_TraineePaymentByPaymentDate" msprop:Generator_TablePropName="View_TraineePaymentByPaymentDate" msprop:Generator_RowDeletingName="View_TraineePaymentByPaymentDateRowDeleting" msprop:Generator_RowChangingName="View_TraineePaymentByPaymentDateRowChanging" msprop:Generator_RowEvHandlerName="View_TraineePaymentByPaymentDateRowChangeEventHandler" msprop:Generator_RowDeletedName="View_TraineePaymentByPaymentDateRowDeleted" msprop:Generator_UserTableName="View_TraineePaymentByPaymentDate" msprop:Generator_RowChangedName="View_TraineePaymentByPaymentDateRowChanged" msprop:Generator_RowEvArgName="View_TraineePaymentByPaymentDateRowChangeEvent" msprop:Generator_RowClassName="View_TraineePaymentByPaymentDateRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PaymentDate" msprop:Generator_ColumnVarNameInTable="columnPaymentDate" msprop:Generator_ColumnPropNameInRow="PaymentDate" msprop:Generator_ColumnPropNameInTable="PaymentDateColumn" msprop:Generator_UserColumnName="PaymentDate" type="xs:dateTime" />
+              <xs:element name="Course" msprop:Generator_ColumnVarNameInTable="columnCourse" msprop:Generator_ColumnPropNameInRow="Course" msprop:Generator_ColumnPropNameInTable="CourseColumn" msprop:Generator_UserColumnName="Course">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentAmount" msprop:Generator_ColumnVarNameInTable="columnPaymentAmount" msprop:Generator_ColumnPropNameInRow="PaymentAmount" msprop:Generator_ColumnPropNameInTable="PaymentAmountColumn" msprop:Generator_UserColumnName="PaymentAmount" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_TraineeCourseCost" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="View_TraineeListForSummary_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_TraineeListForSummary" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,20 @@
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\bin\Debug\DataAccessLogic.dll.config
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\bin\Debug\DataAccessLogic.dll
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\bin\Debug\DataAccessLogic.pdb
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\bin\Debug\EntityFramework.dll
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\bin\Debug\EntityFramework.SqlServer.dll
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\bin\Debug\EntityFramework.xml
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\bin\Debug\EntityFramework.SqlServer.xml
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\obj\Debug\DataAccessLogic.dll
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\obj\Debug\DataAccessLogic.pdb
+E:\BT IT Solutions\Training Information Management System\DataAccessLogic\obj\Debug\DataAccessLogic.csprojResolveAssemblyReference.cache
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\bin\Debug\DataAccessLogic.dll.config
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\bin\Debug\DataAccessLogic.dll
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\bin\Debug\DataAccessLogic.pdb
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\bin\Debug\EntityFramework.dll
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\bin\Debug\EntityFramework.xml
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\obj\Debug\DataAccessLogic.csprojResolveAssemblyReference.cache
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\obj\Debug\DataAccessLogic.dll
+D:\Projects\Programming Camp\Training Information Management System\DataAccessLogic\obj\Debug\DataAccessLogic.pdb

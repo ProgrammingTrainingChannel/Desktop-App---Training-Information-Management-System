@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TIMSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblAcademicLevel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblBranch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblCourse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblGender">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblTrainee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="BirthDate" Type="date" Nullable="false" />
+          <Property Name="GenderID" Type="int" Nullable="false" />
+          <Property Name="AcademicLevelID" Type="int" Nullable="false" />
+          <Property Name="BranchID" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Photo" Type="varbinary(max)" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="date" />
+        </EntityType>
+        <EntityType Name="tblTraineeCourse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TraineeID" Type="int" Nullable="false" />
+          <Property Name="CourseID" Type="int" Nullable="false" />
+          <Property Name="RegistrationDate" Type="date" Nullable="false" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cost" Type="money" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="date" />
+        </EntityType>
+        <EntityType Name="tblTraineeMessage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TraineeID" Type="int" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="date" />
+        </EntityType>
+        <EntityType Name="tblTraineePayment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TraineeCourseID" Type="int" Nullable="false" />
+          <Property Name="PaymentDate" Type="date" Nullable="false" />
+          <Property Name="PaymentAmount" Type="money" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="date" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblUserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TIMSDB.dbo.View_TraineeCourseCost' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_TraineeCourseCost">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="TraineeCourseDetail" Type="nvarchar" MaxLength="277" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TIMSDB.dbo.View_TraineeCourseList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_TraineeCourseList">
+          <Key>
+            <PropertyRef Name="Fullname" />
+            <PropertyRef Name="Course" />
+            <PropertyRef Name="RegistrationDate" />
+            <PropertyRef Name="Duration" />
+            <PropertyRef Name="Cost" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="CreatedDate" />
+          </Key>
+          <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Course" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RegistrationDate" Type="date" Nullable="false" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cost" Type="money" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TIMSDB.dbo.View_TraineeList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_TraineeList">
+          <Key>
+            <PropertyRef Name="Fullname" />
+            <PropertyRef Name="BirthDate" />
+            <PropertyRef Name="Gender" />
+            <PropertyRef Name="AcademicLevel" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="PhoneNumber" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="CreatedDate" />
+          </Key>
+          <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="BirthDate" Type="date" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AcademicLevel" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Photo" Type="varbinary(max)" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TIMSDB.dbo.View_TraineeMessageList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_TraineeMessageList">
+          <Key>
+            <PropertyRef Name="Fullname" />
+            <PropertyRef Name="PhoneNumber" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="CreatedDate" />
+          </Key>
+          <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDate" Type="date" Nullable="false" />
+          <Property Name="UpdatedBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="UpdatedDate" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'TIMSDB.dbo.View_TraineePaymentList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="View_TraineePaymentList">
+          <Key>
+            <PropertyRef Name="Fullname" />
+            <PropertyRef Name="Course" />
+            <PropertyRef Name="RegistrationDate" />
+            <PropertyRef Name="Duration" />
+            <PropertyRef Name="Cost" />
+            <PropertyRef Name="PaymentDate" />
+            <PropertyRef Name="PaymentAmount" />
+          </Key>
+          <Property Name="Fullname" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Course" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="RegistrationDate" Type="date" Nullable="false" />
+          <Property Name="Duration" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cost" Type="money" Nullable="false" />
+          <Property Name="PaymentDate" Type="date" Nullable="false" />
+          <Property Name="PaymentAmount" Type="money" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tblTrainee_tblAcademicLevel">
+          <End Role="tblAcademicLevel" Type="Self.tblAcademicLevel" Multiplicity="1" />
+          <End Role="tblTrainee" Type="Self.tblTrainee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAcademicLevel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTrainee">
+              <PropertyRef Name="AcademicLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrainee_tblBranch">
+          <End Role="tblBranch" Type="Self.tblBranch" Multiplicity="1" />
+          <End Role="tblTrainee" Type="Self.tblTrainee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBranch">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTrainee">
+              <PropertyRef Name="BranchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrainee_tblGender">
+          <End Role="tblGender" Type="Self.tblGender" Multiplicity="1" />
+          <End Role="tblTrainee" Type="Self.tblTrainee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblGender">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTrainee">
+              <PropertyRef Name="GenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTraineeCourse_tblCourse">
+          <End Role="tblCourse" Type="Self.tblCourse" Multiplicity="1" />
+          <End Role="tblTraineeCourse" Type="Self.tblTraineeCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCourse">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTraineeCourse">
+              <PropertyRef Name="CourseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTraineeCourse_tblTrainee">
+          <End Role="tblTrainee" Type="Self.tblTrainee" Multiplicity="1" />
+          <End Role="tblTraineeCourse" Type="Self.tblTraineeCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTrainee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTraineeCourse">
+              <PropertyRef Name="TraineeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTraineeMessage_tblTrainee">
+          <End Role="tblTrainee" Type="Self.tblTrainee" Multiplicity="1" />
+          <End Role="tblTraineeMessage" Type="Self.tblTraineeMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTrainee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTraineeMessage">
+              <PropertyRef Name="TraineeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTraineePayment_tblTraineeCourse">
+          <End Role="tblTraineeCourse" Type="Self.tblTraineeCourse" Multiplicity="1" />
+          <End Role="tblTraineePayment" Type="Self.tblTraineePayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTraineeCourse">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTraineePayment">
+              <PropertyRef Name="TraineeCourseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserRole_tblRole">
+          <End Role="tblRole" Type="Self.tblRole" Multiplicity="1" />
+          <End Role="tblUserRole" Type="Self.tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRole">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblUserRole_tblUser">
+          <End Role="tblUser" Type="Self.tblUser" Multiplicity="1" />
+          <End Role="tblUserRole" Type="Self.tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TIMSDBModelStoreContainer">
+          <EntitySet Name="tblAcademicLevel" EntityType="Self.tblAcademicLevel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblBranch" EntityType="Self.tblBranch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblCourse" EntityType="Self.tblCourse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblGender" EntityType="Self.tblGender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblRole" EntityType="Self.tblRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTrainee" EntityType="Self.tblTrainee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTraineeCourse" EntityType="Self.tblTraineeCourse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTraineeMessage" EntityType="Self.tblTraineeMessage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblTraineePayment" EntityType="Self.tblTraineePayment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUserRole" EntityType="Self.tblUserRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="View_TraineeCourseCost" EntityType="Self.View_TraineeCourseCost" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_TraineeCourseCost].[ID] AS [ID], 
+    [View_TraineeCourseCost].[TraineeCourseDetail] AS [TraineeCourseDetail]
+    FROM [dbo].[View_TraineeCourseCost] AS [View_TraineeCourseCost]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_TraineeCourseList" EntityType="Self.View_TraineeCourseList" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_TraineeCourseList].[Fullname] AS [Fullname], 
+    [View_TraineeCourseList].[Course] AS [Course], 
+    [View_TraineeCourseList].[RegistrationDate] AS [RegistrationDate], 
+    [View_TraineeCourseList].[Duration] AS [Duration], 
+    [View_TraineeCourseList].[Cost] AS [Cost], 
+    [View_TraineeCourseList].[CreatedBy] AS [CreatedBy], 
+    [View_TraineeCourseList].[CreatedDate] AS [CreatedDate], 
+    [View_TraineeCourseList].[UpdatedBy] AS [UpdatedBy], 
+    [View_TraineeCourseList].[UpdatedDate] AS [UpdatedDate]
+    FROM [dbo].[View_TraineeCourseList] AS [View_TraineeCourseList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_TraineeList" EntityType="Self.View_TraineeList" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_TraineeList].[Fullname] AS [Fullname], 
+    [View_TraineeList].[BirthDate] AS [BirthDate], 
+    [View_TraineeList].[Gender] AS [Gender], 
+    [View_TraineeList].[AcademicLevel] AS [AcademicLevel], 
+    [View_TraineeList].[Address] AS [Address], 
+    [View_TraineeList].[PhoneNumber] AS [PhoneNumber], 
+    [View_TraineeList].[Photo] AS [Photo], 
+    [View_TraineeList].[CreatedBy] AS [CreatedBy], 
+    [View_TraineeList].[CreatedDate] AS [CreatedDate], 
+    [View_TraineeList].[UpdatedBy] AS [UpdatedBy], 
+    [View_TraineeList].[UpdatedDate] AS [UpdatedDate]
+    FROM [dbo].[View_TraineeList] AS [View_TraineeList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_TraineeMessageList" EntityType="Self.View_TraineeMessageList" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_TraineeMessageList].[Fullname] AS [Fullname], 
+    [View_TraineeMessageList].[PhoneNumber] AS [PhoneNumber], 
+    [View_TraineeMessageList].[Message] AS [Message], 
+    [View_TraineeMessageList].[Status] AS [Status], 
+    [View_TraineeMessageList].[CreatedBy] AS [CreatedBy], 
+    [View_TraineeMessageList].[CreatedDate] AS [CreatedDate], 
+    [View_TraineeMessageList].[UpdatedBy] AS [UpdatedBy], 
+    [View_TraineeMessageList].[UpdatedDate] AS [UpdatedDate]
+    FROM [dbo].[View_TraineeMessageList] AS [View_TraineeMessageList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_TraineePaymentList" EntityType="Self.View_TraineePaymentList" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_TraineePaymentList].[Fullname] AS [Fullname], 
+    [View_TraineePaymentList].[Course] AS [Course], 
+    [View_TraineePaymentList].[RegistrationDate] AS [RegistrationDate], 
+    [View_TraineePaymentList].[Duration] AS [Duration], 
+    [View_TraineePaymentList].[Cost] AS [Cost], 
+    [View_TraineePaymentList].[PaymentDate] AS [PaymentDate], 
+    [View_TraineePaymentList].[PaymentAmount] AS [PaymentAmount]
+    FROM [dbo].[View_TraineePaymentList] AS [View_TraineePaymentList]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_tblTrainee_tblAcademicLevel" Association="Self.FK_tblTrainee_tblAcademicLevel">
+            <End Role="tblAcademicLevel" EntitySet="tblAcademicLevel" />
+            <End Role="tblTrainee" EntitySet="tblTrainee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrainee_tblBranch" Association="Self.FK_tblTrainee_tblBranch">
+            <End Role="tblBranch" EntitySet="tblBranch" />
+            <End Role="tblTrainee" EntitySet="tblTrainee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrainee_tblGender" Association="Self.FK_tblTrainee_tblGender">
+            <End Role="tblGender" EntitySet="tblGender" />
+            <End Role="tblTrainee" EntitySet="tblTrainee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTraineeCourse_tblCourse" Association="Self.FK_tblTraineeCourse_tblCourse">
+            <End Role="tblCourse" EntitySet="tblCourse" />
+            <End Role="tblTraineeCourse" EntitySet="tblTraineeCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTraineeCourse_tblTrainee" Association="Self.FK_tblTraineeCourse_tblTrainee">
+            <End Role="tblTrainee" EntitySet="tblTrainee" />
+            <End Role="tblTraineeCourse" EntitySet="tblTraineeCourse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTraineeMessage_tblTrainee" Association="Self.FK_tblTraineeMessage_tblTrainee">
+            <End Role="tblTrainee" EntitySet="tblTrainee" />
+            <End Role="tblTraineeMessage" EntitySet="tblTraineeMessage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTraineePayment_tblTraineeCourse" Association="Self.FK_tblTraineePayment_tblTraineeCourse">
+            <End Role="tblTraineeCourse" EntitySet="tblTraineeCourse" />
+            <End Role="tblTraineePayment" EntitySet="tblTraineePayment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserRole_tblRole" Association="Self.FK_tblUserRole_tblRole">
+            <End Role="tblRole" EntitySet="tblRole" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblUserRole_tblUser" Association="Self.FK_tblUserRole_tblUser">
+            <End Role="tblUser" EntitySet="tblUser" />
+            <End Role="tblUserRole" EntitySet="tblUserRole" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TIMSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TIMSDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblAcademicLevels" EntityType="TIMSDBModel.tblAcademicLevel" />
+          <EntitySet Name="tblCourses" EntityType="TIMSDBModel.tblCourse" />
+          <EntitySet Name="tblGenders" EntityType="TIMSDBModel.tblGender" />
+          <EntitySet Name="tblTraineeCourses" EntityType="TIMSDBModel.tblTraineeCourse" />
+          <EntitySet Name="tblTraineeMessages" EntityType="TIMSDBModel.tblTraineeMessage" />
+          <EntitySet Name="tblTraineePayments" EntityType="TIMSDBModel.tblTraineePayment" />
+          <EntitySet Name="View_TraineeCourseList" EntityType="TIMSDBModel.View_TraineeCourseList" />
+          <EntitySet Name="View_TraineeList" EntityType="TIMSDBModel.View_TraineeList" />
+          <EntitySet Name="View_TraineeMessageList" EntityType="TIMSDBModel.View_TraineeMessageList" />
+          <EntitySet Name="View_TraineePaymentList" EntityType="TIMSDBModel.View_TraineePaymentList" />
+          <AssociationSet Name="FK_tblTraineeCourse_tblCourse" Association="TIMSDBModel.FK_tblTraineeCourse_tblCourse">
+            <End Role="tblCourse" EntitySet="tblCourses" />
+            <End Role="tblTraineeCourse" EntitySet="tblTraineeCourses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTraineePayment_tblTraineeCourse" Association="TIMSDBModel.FK_tblTraineePayment_tblTraineeCourse">
+            <End Role="tblTraineeCourse" EntitySet="tblTraineeCourses" />
+            <End Role="tblTraineePayment" EntitySet="tblTraineePayments" />
+          </AssociationSet>
+          <EntitySet Name="View_TraineeCourseCost" EntityType="TIMSDBModel.View_TraineeCourseCost" />
+          <EntitySet Name="tblBranches" EntityType="TIMSDBModel.tblBranch" />
+          <EntitySet Name="tblTrainees" EntityType="TIMSDBModel.tblTrainee" />
+          <AssociationSet Name="FK_tblTrainee_tblAcademicLevel" Association="TIMSDBModel.FK_tblTrainee_tblAcademicLevel">
+            <End Role="tblAcademicLevel" EntitySet="tblAcademicLevels" />
+            <End Role="tblTrainee" EntitySet="tblTrainees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrainee_tblBranch" Association="TIMSDBModel.FK_tblTrainee_tblBranch">
+            <End Role="tblBranch" EntitySet="tblBranches" />
+            <End Role="tblTrainee" EntitySet="tblTrainees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTrainee_tblGender" Association="TIMSDBModel.FK_tblTrainee_tblGender">
+            <End Role="tblGender" EntitySet="tblGenders" />
+            <End Role="tblTrainee" EntitySet="tblTrainees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTraineeCourse_tblTrainee" Association="TIMSDBModel.FK_tblTraineeCourse_tblTrainee">
+            <End Role="tblTrainee" EntitySet="tblTrainees" />
+            <End Role="tblTraineeCourse" EntitySet="tblTraineeCourses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblTraineeMessage_tblTrainee" Association="TIMSDBModel.FK_tblTraineeMessage_tblTrainee">
+            <End Role="tblTrainee" EntitySet="tblTrainees" />
+            <End Role="tblTraineeMessage" EntitySet="tblTraineeMessages" />
+          </AssociationSet>
+          <EntitySet Name="tblRoles" EntityType="TIMSDBModel.tblRole" />
+          <EntitySet Name="tblUserRoles" EntityType="TIMSDBModel.tblUserRole" />
+          <AssociationSet Name="FK_tblUserRole_tblRole" Association="TIMSDBModel.FK_tblUserRole_tblRole">
+            <End Role="tblRole" EntitySet="tblRoles" />
+            <End Role="tblUserRole" EntitySet="tblUserRoles" />
+          </AssociationSet>
+          <EntitySet Name="tblUsers" EntityType="TIMSDBModel.tblUser" />
+          <AssociationSet Name="FK_tblUserRole_tblUser" Association="TIMSDBModel.FK_tblUserRole_tblUser">
+            <End Role="tblUser" EntitySet="tblUsers" />
+            <End Role="tblUserRole" EntitySet="tblUserRoles" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="tblAcademicLevel">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblTrainees" Relationship="TIMSDBModel.FK_tblTrainee_tblAcademicLevel" FromRole="tblAcademicLevel" ToRole="tblTrainee" />
+        </EntityType>
+        <EntityType Name="tblCourse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblTraineeCourses" Relationship="TIMSDBModel.FK_tblTraineeCourse_tblCourse" FromRole="tblCourse" ToRole="tblTraineeCourse" />
+        </EntityType>
+        <EntityType Name="tblGender">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblTrainees" Relationship="TIMSDBModel.FK_tblTrainee_tblGender" FromRole="tblGender" ToRole="tblTrainee" />
+        </EntityType>
+        <EntityType Name="tblTraineeCourse">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TraineeID" Type="Int32" Nullable="false" />
+          <Property Name="CourseID" Type="Int32" Nullable="false" />
+          <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Duration" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="tblCourse" Relationship="TIMSDBModel.FK_tblTraineeCourse_tblCourse" FromRole="tblTraineeCourse" ToRole="tblCourse" />
+          <NavigationProperty Name="tblTraineePayments" Relationship="TIMSDBModel.FK_tblTraineePayment_tblTraineeCourse" FromRole="tblTraineeCourse" ToRole="tblTraineePayment" />
+          <NavigationProperty Name="tblTrainee" Relationship="TIMSDBModel.FK_tblTraineeCourse_tblTrainee" FromRole="tblTraineeCourse" ToRole="tblTrainee" />
+        </EntityType>
+        <EntityType Name="tblTraineeMessage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TraineeID" Type="Int32" Nullable="false" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="tblTrainee" Relationship="TIMSDBModel.FK_tblTraineeMessage_tblTrainee" FromRole="tblTraineeMessage" ToRole="tblTrainee" />
+        </EntityType>
+        <EntityType Name="tblTraineePayment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TraineeCourseID" Type="Int32" Nullable="false" />
+          <Property Name="PaymentDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PaymentAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="tblTraineeCourse" Relationship="TIMSDBModel.FK_tblTraineePayment_tblTraineeCourse" FromRole="tblTraineePayment" ToRole="tblTraineeCourse" />
+        </EntityType>
+        <EntityType Name="View_TraineeCourseList">
+          <Key>
+            <PropertyRef Name="Fullname" />
+            <PropertyRef Name="Course" />
+            <PropertyRef Name="RegistrationDate" />
+            <PropertyRef Name="Duration" />
+            <PropertyRef Name="Cost" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="CreatedDate" />
+          </Key>
+          <Property Name="Fullname" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Course" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Duration" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="View_TraineeList">
+          <Key>
+            <PropertyRef Name="Fullname" />
+            <PropertyRef Name="BirthDate" />
+            <PropertyRef Name="Gender" />
+            <PropertyRef Name="AcademicLevel" />
+            <PropertyRef Name="Address" />
+            <PropertyRef Name="PhoneNumber" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="CreatedDate" />
+          </Key>
+          <Property Name="Fullname" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AcademicLevel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="View_TraineeMessageList">
+          <Key>
+            <PropertyRef Name="Fullname" />
+            <PropertyRef Name="PhoneNumber" />
+            <PropertyRef Name="Message" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="CreatedBy" />
+            <PropertyRef Name="CreatedDate" />
+          </Key>
+          <Property Name="Fullname" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="View_TraineePaymentList">
+          <Key>
+            <PropertyRef Name="Fullname" />
+            <PropertyRef Name="Course" />
+            <PropertyRef Name="RegistrationDate" />
+            <PropertyRef Name="Duration" />
+            <PropertyRef Name="Cost" />
+            <PropertyRef Name="PaymentDate" />
+            <PropertyRef Name="PaymentAmount" />
+          </Key>
+          <Property Name="Fullname" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Course" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RegistrationDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Duration" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="PaymentDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PaymentAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <Association Name="FK_tblTraineeCourse_tblCourse">
+          <End Type="TIMSDBModel.tblCourse" Role="tblCourse" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblTraineeCourse" Role="tblTraineeCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblCourse">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTraineeCourse">
+              <PropertyRef Name="CourseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTraineePayment_tblTraineeCourse">
+          <End Type="TIMSDBModel.tblTraineeCourse" Role="tblTraineeCourse" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblTraineePayment" Role="tblTraineePayment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTraineeCourse">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTraineePayment">
+              <PropertyRef Name="TraineeCourseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="View_TraineeCourseCost">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="TraineeCourseDetail" Type="String" MaxLength="277" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblBranch">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblTrainees" Relationship="TIMSDBModel.FK_tblTrainee_tblBranch" FromRole="tblBranch" ToRole="tblTrainee" />
+        </EntityType>
+        <EntityType Name="tblTrainee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fullname" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="GenderID" Type="Int32" Nullable="false" />
+          <Property Name="AcademicLevelID" Type="Int32" Nullable="false" />
+          <Property Name="BranchID" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="tblAcademicLevel" Relationship="TIMSDBModel.FK_tblTrainee_tblAcademicLevel" FromRole="tblTrainee" ToRole="tblAcademicLevel" />
+          <NavigationProperty Name="tblBranch" Relationship="TIMSDBModel.FK_tblTrainee_tblBranch" FromRole="tblTrainee" ToRole="tblBranch" />
+          <NavigationProperty Name="tblGender" Relationship="TIMSDBModel.FK_tblTrainee_tblGender" FromRole="tblTrainee" ToRole="tblGender" />
+          <NavigationProperty Name="tblTraineeCourses" Relationship="TIMSDBModel.FK_tblTraineeCourse_tblTrainee" FromRole="tblTrainee" ToRole="tblTraineeCourse" />
+          <NavigationProperty Name="tblTraineeMessages" Relationship="TIMSDBModel.FK_tblTraineeMessage_tblTrainee" FromRole="tblTrainee" ToRole="tblTraineeMessage" />
+        </EntityType>
+        <Association Name="FK_tblTrainee_tblAcademicLevel">
+          <End Type="TIMSDBModel.tblAcademicLevel" Role="tblAcademicLevel" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblTrainee" Role="tblTrainee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblAcademicLevel">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTrainee">
+              <PropertyRef Name="AcademicLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrainee_tblBranch">
+          <End Type="TIMSDBModel.tblBranch" Role="tblBranch" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblTrainee" Role="tblTrainee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblBranch">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTrainee">
+              <PropertyRef Name="BranchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTrainee_tblGender">
+          <End Type="TIMSDBModel.tblGender" Role="tblGender" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblTrainee" Role="tblTrainee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblGender">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTrainee">
+              <PropertyRef Name="GenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTraineeCourse_tblTrainee">
+          <End Type="TIMSDBModel.tblTrainee" Role="tblTrainee" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblTraineeCourse" Role="tblTraineeCourse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTrainee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTraineeCourse">
+              <PropertyRef Name="TraineeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblTraineeMessage_tblTrainee">
+          <End Type="TIMSDBModel.tblTrainee" Role="tblTrainee" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblTraineeMessage" Role="tblTraineeMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblTrainee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblTraineeMessage">
+              <PropertyRef Name="TraineeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tblRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblUserRoles" Relationship="TIMSDBModel.FK_tblUserRole_tblRole" FromRole="tblRole" ToRole="tblUserRole" />
+        </EntityType>
+        <EntityType Name="tblUserRole">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblRole" Relationship="TIMSDBModel.FK_tblUserRole_tblRole" FromRole="tblUserRole" ToRole="tblRole" />
+          <NavigationProperty Name="tblUser" Relationship="TIMSDBModel.FK_tblUserRole_tblUser" FromRole="tblUserRole" ToRole="tblUser" />
+        </EntityType>
+        <Association Name="FK_tblUserRole_tblRole">
+          <End Type="TIMSDBModel.tblRole" Role="tblRole" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblUserRole" Role="tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRole">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblUserRoles" Relationship="TIMSDBModel.FK_tblUserRole_tblUser" FromRole="tblUser" ToRole="tblUserRole" />
+        </EntityType>
+        <Association Name="FK_tblUserRole_tblUser">
+          <End Type="TIMSDBModel.tblUser" Role="tblUser" Multiplicity="1" />
+          <End Type="TIMSDBModel.tblUserRole" Role="tblUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblUser">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblUserRole">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TIMSDBModelStoreContainer" CdmEntityContainer="TIMSDBEntities">
+          <EntitySetMapping Name="tblAcademicLevels">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblAcademicLevel">
+              <MappingFragment StoreEntitySet="tblAcademicLevel">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblCourses">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblCourse">
+              <MappingFragment StoreEntitySet="tblCourse">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblGenders">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblGender">
+              <MappingFragment StoreEntitySet="tblGender">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTraineeCourses">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblTraineeCourse">
+              <MappingFragment StoreEntitySet="tblTraineeCourse">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+                <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTraineeMessages">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblTraineeMessage">
+              <MappingFragment StoreEntitySet="tblTraineeMessage">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="TraineeID" ColumnName="TraineeID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTraineePayments">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblTraineePayment">
+              <MappingFragment StoreEntitySet="tblTraineePayment">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="TraineeCourseID" ColumnName="TraineeCourseID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_TraineeCourseList">
+            <EntityTypeMapping TypeName="TIMSDBModel.View_TraineeCourseList">
+              <MappingFragment StoreEntitySet="View_TraineeCourseList">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="Course" ColumnName="Course" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_TraineeList">
+            <EntityTypeMapping TypeName="TIMSDBModel.View_TraineeList">
+              <MappingFragment StoreEntitySet="View_TraineeList">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="AcademicLevel" ColumnName="AcademicLevel" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_TraineeMessageList">
+            <EntityTypeMapping TypeName="TIMSDBModel.View_TraineeMessageList">
+              <MappingFragment StoreEntitySet="View_TraineeMessageList">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_TraineePaymentList">
+            <EntityTypeMapping TypeName="TIMSDBModel.View_TraineePaymentList">
+              <MappingFragment StoreEntitySet="View_TraineePaymentList">
+                <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="Course" ColumnName="Course" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_TraineeCourseCost">
+            <EntityTypeMapping TypeName="TIMSDBModel.View_TraineeCourseCost">
+              <MappingFragment StoreEntitySet="View_TraineeCourseCost">
+                <ScalarProperty Name="TraineeCourseDetail" ColumnName="TraineeCourseDetail" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblBranches">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblBranch">
+              <MappingFragment StoreEntitySet="tblBranch">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTrainees">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblTrainee">
+              <MappingFragment StoreEntitySet="tblTrainee">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="AcademicLevelID" ColumnName="AcademicLevelID" />
+                <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRoles">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblRole">
+              <MappingFragment StoreEntitySet="tblRole">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUserRoles">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblUserRole">
+              <MappingFragment StoreEntitySet="tblUserRole">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUsers">
+            <EntityTypeMapping TypeName="TIMSDBModel.tblUser">
+              <MappingFragment StoreEntitySet="tblUser">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

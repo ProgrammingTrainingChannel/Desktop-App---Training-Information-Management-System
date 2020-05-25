@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2015Limited\InstallShield.targets"/>
+	<ItemGroup/>
+	<ItemGroup>
+		<ProjectReference Include="..\BusinessEntity\BusinessEntity.csproj">
+			<Name>BusinessEntity</Name>
+			<Project>{C9D80E17-C01F-4616-92CE-78870C862F78}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+			<Name>BusinessLogic</Name>
+			<Project>{E031475A-B52B-4A49-9AD8-664073070BAD}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\DataAccessLogic\DataAccessLogic.csproj">
+			<Name>DataAccessLogic</Name>
+			<Project>{A55DBC3D-373C-4A15-8C6B-E4A6D85775E5}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Training Information Management System\TIMS.csproj">
+			<Name>TIMS</Name>
+			<Project>{9A9BD409-42D5-4DF6-9703-58611B879CCA}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>
